@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+
+  <tr *ngFor="let dt of data">
+    <td *ngFor="let param of parameters">
+      {{getValue(dt,param)}}
+    </td>
+  </tr>
+
+</table>
+
