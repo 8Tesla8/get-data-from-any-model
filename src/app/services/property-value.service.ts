@@ -1,16 +1,5 @@
 export class PropertyValueService{
 
-    public transformPropertyIntoString(obj: object, paths: string[], format: string):string{
-        let values: string[] = [];
-        paths.forEach((path) => {
-            let value = this.getValue(obj, path);
-            values.push(value);
-        });
-
-        let result = this.setFormat(values, format);
-        return result;
-    }
-
     public getValue(obj: object, path: string): string{
         let value = "";
 
@@ -64,4 +53,16 @@ export class PropertyValueService{
 
         return str;
     }
+
+    public transformPropertyIntoString(obj: object, paths: string[], format: string):string{
+        let values: string[] = [];
+        paths.forEach((path) => {
+            let value = this.getValue(obj, path);
+            values.push(value);
+        });
+
+        let result = this.setFormat(values, format);
+        return result;
+    }
+
 }

@@ -66,35 +66,6 @@ export class AppComponent implements OnInit {
     return data;
   }
 
-  public generateTableParameters(): PropertyParameter[] {
-    let param = [
-      {
-        propertyPaths:[
-          'location.country',
-          'location.city',
-        ],
-        format: 'code: 0; city: 1',
-      },
-      {
-        propertyPaths:[
-          'company.name',
-          'company.size',
-        ],
-        format: '0, 1 people',
-      },
-      {
-        propertyPaths:[
-          'cargo.name',
-          'cargo.size',
-        ],
-        format: 'Cargo: 0, type: 1',
-      } 
-    ];
-
-
-    return param;
-  }
-
   public generateStudentData(): Student {
     let student = {
       age: 21,
@@ -107,6 +78,36 @@ export class AppComponent implements OnInit {
     };
 
     return student;
+  }
+
+
+  public generateTableParameters(): PropertyParameter[] {
+    let param = [
+      {
+        propertyPaths:[
+          'location.country',
+          'location.city',
+        ],
+        format: '0; city: 1',
+      },
+      {
+        propertyPaths:[
+          'company.name',
+          'company.size',
+        ],
+        format: '0, 1 people',
+      },
+      {
+        propertyPaths:[
+          'cargo.name',
+          'cargo.type',
+        ],
+        format: '0, type: 1',
+      } 
+    ];
+
+
+    return param;
   }
 
   public generateStudentParameters() : PropertyParameter[]{
