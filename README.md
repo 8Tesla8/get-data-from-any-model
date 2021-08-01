@@ -1,3 +1,3 @@
-# Get any data in component
+# angular templates
 
 ![](pic/result.png)
